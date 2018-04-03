@@ -1,6 +1,6 @@
 {
-  "name": "react-native-mentions",
-  "version": "1.1.4",
+  "name": "@mjmasn/react-native-mentions",
+  "version": "1.2.1",
   "description": "Mentions textbox for React Native. Works on both ios and android",
   "main": "index.js",
   "scripts": {
@@ -8,18 +8,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harshq/react-native-mentions.git"
+    "url": "git+https://github.com/mjmasn/react-native-mentions.git"
   },
-  "keywords": [
-    "react-component",
-    "react-native",
-    "mentions",
-    "textInput"
-  ],
+  "keywords": ["react-component", "react-native", "mentions", "textInput"],
   "author": "Harshana Abeyaratne <harshana.abeyaratne@gmail.com> (https://github.com/harshq)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/harshq/react-native-mentions/issues"
   },
-  "homepage": "https://github.com/harshq/react-native-mentions#readme"
+  "homepage": "https://github.com/harshq/react-native-mentions#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.6.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-native": "^0.53.0",
+    "prettier": "^1.10.2"
+  }
 }
