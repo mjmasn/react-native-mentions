@@ -31,6 +31,8 @@ export default class MentionsTextInput extends Component {
           : nextProps.MaxVisibleRowCount;
       const height = numOfRows * nextProps.suggestionRowHeight;
       this.openSuggestionsPanel(height);
+    } else if (nextProps.suggestionsData.length === 0) {
+      this.openSuggestionsPanel(0);
     }
   }
 
@@ -76,7 +78,7 @@ export default class MentionsTextInput extends Component {
 
   openSuggestionsPanel(height) {
     Animated.timing(this.state.suggestionRowHeight, {
-      toValue: height ? height : this.props.suggestionRowHeight,
+      toValue: height != null ? height : this.props.suggestionRowHeight,
       duration: 100,
     }).start();
   }
