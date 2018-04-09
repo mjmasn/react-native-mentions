@@ -78,7 +78,7 @@ export default class MentionsTextInput extends Component {
 
   openSuggestionsPanel(height) {
     Animated.timing(this.state.suggestionRowHeight, {
-      toValue: height || height === 0 ? height : this.props.suggestionRowHeight,
+      toValue: height != null ? height : this.props.suggestionRowHeight,
       duration: 100,
     }).start();
   }
