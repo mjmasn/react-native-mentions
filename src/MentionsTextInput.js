@@ -119,6 +119,7 @@ export default class MentionsTextInput extends Component {
       value,
       textInputMaxHeight,
       placeholder,
+      multiline
     } = this.props;
 
     const {suggestionRowHeight, textInputHeight} = this.state;
@@ -158,7 +159,7 @@ export default class MentionsTextInput extends Component {
             this._textInput = component;
           }}
           onChangeText={this.onChangeText.bind(this)}
-          multiline
+          multiline={multiline}
           value={value}
           style={[textInputStyle, {height: Math.min(textInputMaxHeight, textInputHeight)}]}
           placeholder={placeholder ? placeholder : 'Write a comment...'}
@@ -189,6 +190,7 @@ MentionsTextInput.propTypes = {
       return new Error("Prop 'MaxVisibleRowCount' is required if horizontal is set to false.");
     }
   },
+  multiline: PropTypes.bool,
 };
 
 MentionsTextInput.defaultProps = {
@@ -198,4 +200,5 @@ MentionsTextInput.defaultProps = {
   textInputMinHeight: 30,
   textInputMaxHeight: 80,
   horizontal: true,
+  multiline: true,
 };
