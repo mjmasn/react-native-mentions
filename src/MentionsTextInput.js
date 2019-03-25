@@ -22,7 +22,7 @@ export default class MentionsTextInput extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.value) {
+    if (this.props.value && !nextProps.value) {
       this.resetTextbox();
     } else if (this.isTrackingStarted && !nextProps.horizontal && nextProps.suggestionsData.length !== 0) {
       const numOfRows =
@@ -161,7 +161,7 @@ export default class MentionsTextInput extends Component {
           onChangeText={this.onChangeText.bind(this)}
           multiline={multiline}
           value={value}
-          style={[textInputStyle, {height: Math.min(textInputMaxHeight, textInputHeight)}]}
+          style={[textInputStyle, {minHeight: textInputMinHeight, maxHeight: textInputMaxHeight}]}
           placeholder={placeholder ? placeholder : 'Write a comment...'}
         />
       </View>
