@@ -161,7 +161,7 @@ export default class MentionsTextInput extends Component {
           onChangeText={this.onChangeText.bind(this)}
           multiline={multiline}
           value={value}
-          style={[textInputStyle, {minHeight: textInputMinHeight, maxHeight: textInputMaxHeight}]}
+          style={[textInputStyle, {height: Math.min(textInputMaxHeight, textInputHeight)}]}
           placeholder={placeholder ? placeholder : 'Write a comment...'}
         />
       </View>
