@@ -1,5 +1,5 @@
 # react-native-mentions [![npm version](https://badge.fury.io/js/react-native-mentions.svg)](https://badge.fury.io/js/react-native-mentions)
-Mentions textbox for React Native. Works on both ios and android. 
+Mentions textbox for React Native. Works on both ios and android.
 
 ## Demo
 
@@ -30,17 +30,17 @@ import MentionsTextInput from 'react-native-mentions';
     triggerCallback={this.callback.bind(this)}
     renderSuggestionsRow={this.renderSuggestionsRow.bind(this)}
     suggestionsData={this.state.data} // array of objects
-    keyExtractor={(item, index) => item.UserName} 
+    keyExtractor={(item, index) => item.UserName}
     suggestionRowHeight={45}
-          
+
     horizontal={false} // default is true, change the orientation of the list
     MaxVisibleRowCount={3} // this is required if horizontal={false}
   />
 ```
 
-## Example 
+## Example
 
-Check full example in the `sampleApp` folder. 
+Check full example in the `sampleApp` folder.
 
 ## Breaking changes ( 0.0.4 -> 1.1.1 )
 
@@ -48,7 +48,7 @@ Check full example in the `sampleApp` folder.
 
 - `SuggestionsDataSource` prop is renamed to `suggestionsData`. This now accepts a array of objects. DataSource, No more!
 
-- `SuggestionsPanelHeight` prop is renamed to `suggestionRowHeight` in order to support vertical lists. 
+- `SuggestionsPanelHeight` prop is renamed to `suggestionRowHeight` in order to support vertical lists.
 
 
 ## License
